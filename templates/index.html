@@ -7,16 +7,10 @@
 
     <body>
         <h1>Crie seu personagem</h1>
-        <!-- <div>
-            <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/blue/stand.png" alt="PLAYER 1">
-            <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/green/stand.png" alt="PLAYER 2">
-            <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/grey/stand.png" alt="PLAYER 3">
-            <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/red/stand.png" alt="PLAYER 4">
-        </div> -->
         <div class="conteudo">
-            <form action="/" method="POST">
+            <form action="/" name="myForm" method="POST">
                 <label>
-                    <input type="radio" name="players" value="1" oninvalid="alert('Você deve escolher um personagem!');" required>
+                    <input type="radio" name="players" value="1" required>
                     <img src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/blue/stand.png">
                 </label>
                 <label>
@@ -31,20 +25,14 @@
                     <input type="radio" name="players" value="4">
                     <img src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/red/stand.png">
                 </label>
-                <div>
-                    <input type="text" name = "nome" required placeholder="NOME">
-                    <input type="submit" value="CONCLUIR">                 
-                </div>
-            </form>
         </div>
-
-        <!-- <div>
-            <form action="/" method="POST">
-                <input type="text" name = "nome" required placeholder="NOME">
-                <input type="submit">
-                <!-- <button type="submit">CONFIRMAR</button> -->
-            </form>
-        </div> -->
+        <div id="textField">
+            <input type="text" name = "nome" required placeholder="NOME">
+        </div>
+        <div id="arrow">
+            <input type="image" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/other/arrows/arrow.png" border="0" alt="Submit" />
+        </div>
+        </form>
     </body>
 </html>
 
