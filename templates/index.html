@@ -6,17 +6,17 @@
     </head>
 
     <body>
-        <h1>Escolha seu personagem</h1>
+        <h1>Crie seu personagem</h1>
         <!-- <div>
             <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/blue/stand.png" alt="PLAYER 1">
             <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/green/stand.png" alt="PLAYER 2">
             <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/grey/stand.png" alt="PLAYER 3">
             <img class="player" src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/red/stand.png" alt="PLAYER 4">
         </div> -->
-        <div>
+        <div class="conteudo">
             <form action="/" method="POST">
                 <label>
-                    <input type="radio" name="players" value="1" required>
+                    <input type="radio" name="players" value="1" oninvalid="alert('Você deve escolher um personagem!');" required>
                     <img src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/blue/stand.png">
                 </label>
                 <label>
@@ -33,7 +33,7 @@
                 </label>
                 <div>
                     <input type="text" name = "nome" required placeholder="NOME">
-                    <button type="submit">CONFIRMAR</button>                 
+                    <input type="submit" value="CONCLUIR">                 
                 </div>
             </form>
         </div>
