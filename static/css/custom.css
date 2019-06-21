@@ -1,6 +1,6 @@
 html {
     background: url(https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/background/brown/hills.png)
-                repeat fixed,
+                repeat-x center bottom fixed,
                 url(https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/background/blue/tiles.png)
                 repeat center fixed;
     background-size: contain, cover;
@@ -20,7 +20,8 @@ input[type=text] {
     font-weight: 600;
     font-size: 1em;
     padding: 7px;
-    background-color: rgb(141, 223, 193);
+    margin: 0.5em;
+    background-color: rgba(155, 226, 200, 0.8);
     color: black;
     border: 1.5px solid black;
     border-radius: 15px;
@@ -91,12 +92,13 @@ th, td{
 tr:hover {background-color: rgba(34, 34, 34, 0.4);}
 
 #textField {
-    display: flex;
+    display: grid;
     justify-content: center;
-    margin-right: 6px;
-    float: left;
+    /* float: left; */
+
 }
 
 #arrow {
-    position: relative;
+    display: flex;
+    justify-content: center;
 }
