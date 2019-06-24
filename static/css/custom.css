@@ -7,7 +7,7 @@ html {
 }
 
 h1 {
-    text-align: center
+    text-align: center; 
 }
 
 .conteudo {
@@ -32,17 +32,7 @@ input[type=text]:focus {
     background-color: cyan;
 }
 
-/* Botao de enviar */
-/* input[type=submit] {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 600;
-    color: black;
-    border-radius: 5px;
-    background-color: white;
-    outline: none;
-    cursor: pointer;
-} */
-
+/* ----------------------------------------------------------------------------------------- */
 /* 'Botão Seta' de enviar */
 input[type=image] {
     object-fit: contain;
@@ -51,32 +41,12 @@ input[type=image] {
 }
 
 input[type=image]:active {
-    transform: translateX(5px) scale(1.05,1.05);
-    filter: brightness(120%);
+    transform: translateX(6px);
+    filter: brightness(125%);
 }
+/* ----------------------------------------------------------------------------------------- */
 
-/* HIDE RADIO */
-[type=radio] { 
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-/* IMAGE STYLES */
-[type=radio] + img {
-    cursor: pointer;
-    margin: 1em;
-}
-
-[type=radio] + img:hover{
-    transform: scale(1.2, 1.2);
-}
-/* CHECKED STYLES */
-[type=radio]:checked + img {
-    outline: 2px solid red;
-    transform: scale(1.25, 1.25);
-    }
-
+/* ----------------------------------------------------------------------------------------- */
 /* Tabela */
 table, th, td {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -90,6 +60,7 @@ th, td{
 }
 
 tr:hover {background-color: rgba(34, 34, 34, 0.4);}
+/* ------------------------------------------------------------------------------------------ */
 
 #textField {
     display: grid;
@@ -102,3 +73,33 @@ tr:hover {background-color: rgba(34, 34, 34, 0.4);}
     display: flex;
     justify-content: center;
 }
+
+/* ---------------------------------------------------------- */
+/* PLAYERS */
+label > img {
+
+}
+
+input[type=radio]{ 
+   display: none;
+}
+
+input[type=radio] + label {
+    opacity: 0.8;
+    display: inline-block;
+    margin: 1em;
+    padding: 5px;
+    cursor: pointer;
+}
+
+input[type=radio]:hover + label {
+    opacity: 0.9;
+    transform: scale(1.2);
+}
+
+input[type=radio]:checked + label { 
+    opacity: 1.0;
+    transform: scale(1.2);
+    outline: 2px solid rgba(145, 118, 93, 0.884);
+}
+/* ------------------------------------------------------------ */
