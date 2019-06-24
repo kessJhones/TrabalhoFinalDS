@@ -25,6 +25,15 @@ def dados():
         idade = request.form.get('idade')
         estado =  request.form.get('estado')
     
+    if genero == '1':
+        cor = "blue"
+    elif genero == '2':
+        cor = "green"
+    elif genero == '3':
+        cor = "grey"
+    elif genero == '4':
+        cor = "red"
+
     if genero == '1' or genero == '2':
         salario = dd.income_gender()
         salario = salario.iat[0,0]
@@ -42,6 +51,7 @@ def dados():
         genero = genero,
         salario = salario,
         estado = estado,
+        cor = cor,
     )
 
 # Essa rota usa o method 'GET' e mostra os dados na url.
