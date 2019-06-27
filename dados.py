@@ -7,12 +7,12 @@ df = df.fillna(df.mean())
 def income_gender():
     values = df[['gender', 'income']].groupby('gender').mean()
     values.rename(columns={'income': 'Renda'}, inplace=True)
-    return values
+    return round(values, 2)
 
 #Agrupa por genero e raça, media salarial de cada raça.
 def income_gender_race():
     values = df[['gender', 'race', 'income']].groupby(['gender','race']).mean()
-    return(values)
+    return round(values, 2)
 
 #Agrupa por genero e raça, media de escolaridade de cada raça.
 def education_gender_race():
