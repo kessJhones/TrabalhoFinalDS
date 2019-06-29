@@ -1,7 +1,7 @@
 html {
-    background: url(https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/background/brown/hills.png)
+    background: url(https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/hills.png)
                 repeat-x center bottom fixed,
-                url(https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/background/blue/tiles.png)
+                url(https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/tiles.png)
                 repeat center fixed;
     background-size: contain, cover;
 }
@@ -14,18 +14,6 @@ h1 {
     display: flex;
     justify-content: center;
 }
-
-/* input[type=number] {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 600;
-    font-size: 1em;
-    padding: 7px;
-    background-color: rgba(155, 226, 200, 0.8);
-    color: black;
-    border: 1.5px solid black;
-    border-radius: 15px;
-    outline: none;
-} */
 
 input[type=text] {
     font-family: fantasy;
