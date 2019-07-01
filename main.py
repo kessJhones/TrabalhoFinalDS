@@ -17,31 +17,34 @@ def dados():
         genero = request.form.get('players')
         idade = request.form.get('idade')
         estado =  request.form.get('estado')
+
+    players = {'blue':('Mulher','Branca','blue'), 'green':('Mulher','Negra','green'),
+                'grey':('Homem','Branco','grey'), 'red':('Homem','Negro','red')}
+
+    (genero, raça, cor) = players.get(genero, ('','',''))
+
+    if genero == 'Mulher':
+        if raça == 'Branca':
+            salario = dd.income_gender()
+            salario = salario.iat[1,0]
+        elif raça == 'Negra':
+            salario = dd.income_gender()
+            salario = salario.iat[1,0]
     
-    if genero == '1':
-        cor = "blue"
-    elif genero == '2':
-        cor = "green"
-    elif genero == '3':
-        cor = "grey"
-    elif genero == '4':
-        cor = "red"
-
-    if genero == '1' or genero == '2':
-        salario = dd.income_gender()
-        salario = salario.iat[0,0]
-        genero = "Homem"
-
-    elif (genero == '3' or genero == '4'):
-        salario = dd.income_gender()
-        salario = salario.iat[1,0]
-        genero = "Mulher"
+    if genero == 'Homem':
+        if raça == 'Branco':
+            salario = dd.income_gender()
+            salario = salario.iat[0,0]
+        elif raça == 'Negro':
+            salario = dd.income_gender()
+            salario = salario.iat[0,0]
     
     return render_template('dados.html',
         title='Ficha',
         nome = nome_personagem,
         idade = idade,
         genero = genero,
+        raça = raça,
         salario = salario,
         estado = estado,
         cor = cor,
