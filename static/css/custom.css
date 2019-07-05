@@ -4,6 +4,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
 html {
     background: url(https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/hills.png)
                 repeat-x center bottom fixed,
@@ -33,15 +38,19 @@ input[type=text] {
     width: 10em;
     height: 0.5em;
     padding: 0.55em;
-    margin: 0.5em;
+    margin: 0.8em;
     background-color: lightyellow;
     border: 2px solid black;
-    border-radius: 15px;
+    border-radius: 9999em;
+    text-transform: capitalize;
     outline: none;
 }
 
 input[type=text]:valid {
     background-color:  rgba(255, 255, 164, 0.9);
+}
+
+input[type=text]:invalid {
 }
 
 input::-webkit-input-placeholder {
@@ -51,21 +60,26 @@ input::-webkit-input-placeholder {
 }
 
 input[type=text]:hover{
-    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.75);
     transform: scale(1.02);
 }
 
 input[type=text]:focus {
     background-color: rgba(255, 255, 164, 0.95);
-    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.75);
     transform: scale(1.02);
+}
+
+input[type=text]:focus ~ label {
+    translate: 0 -35px;
+
 }
 
 /* ----------------------------------------------------------------------------------------- */
 /* 'Botão Seta' de enviar */
 input[type=image] {
     object-fit: contain;
-    /* height: 30px; */
+    height: 45px;
     outline: none;
 }
 
@@ -79,6 +93,7 @@ input[type=image]:active {
 /* Tabela */
 table {
     background-color: lightyellow;
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.75);
 }
 
 .ficha {
@@ -101,7 +116,7 @@ tr:hover {background-color: rgb(255, 255, 164)}
 /* ------------------------------------------------------------------------------------------ */
 
 #textField {
-    display: grid;
+    display: flex;
     justify-content: center;
     /* float: left; */
 
@@ -123,23 +138,26 @@ input[type=radio]{
 
 input[type=radio] + label {
     border: 2px solid transparent;
+    border-radius: 9999em;
     opacity: 0.9;
     display: inline-block;
     margin: 1em 1em;
-    padding: 0.5em;
+    padding: 0.7em;
     cursor: pointer;
+    transition: .4s ease;
 }
 
 input[type=radio]:hover + label {
     opacity: 0.95;
     transform: scale(1.3);
+    /* transition: .4s ease; */
 }
 
 input[type=radio]:checked + label { 
     opacity: 1.0;
     transform: scale(1.2);
-    border: 2px solid rgba(106, 255, 200);
-    border-radius: 15px;
+    /* border: 2px solid rgba(106, 255, 200); */
+    box-shadow: inset 0 0 0.5em lightyellow, 0 0 0.52em black;
     /* outline: 2px solid rgba(106, 255, 200); */
 }
 
@@ -172,11 +190,12 @@ select {
     font-size: 20px;
     font-weight: bold;
     padding: 0.35em;
-    margin: 0.5em;
+    margin: 0.8em;
+    width: 11.4em;
     background-color: lightyellow;
     color: black;
     border: 2px solid rgba(0, 0, 0, 0.8);
-    border-radius: 15px;
+    border-radius: 9999em;
     outline: none;
     cursor: pointer;
 }
@@ -186,15 +205,21 @@ select:valid {
 }
 
 select:hover {
-    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.75);
     transform: scale(1.02);
 }
 
 /* --------------------------------------------------------------------- */
+#f2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+}
 
 fieldset {
     border: 2px solid black;
     background-color: rgba(255, 255, 224, 0.5);
+    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
 }
 
 legend {
