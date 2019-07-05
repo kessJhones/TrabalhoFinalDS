@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'pixelFont';
+    src: url('webfontkit-20190623-205541/monogram_extended-webfont.woff');
+    font-weight: normal;
+    font-style: normal;
+}
 html {
     background: url(https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/hills.png)
                 repeat-x center bottom fixed,
@@ -8,6 +14,10 @@ html {
 
 h1 {
     text-align: center; 
+    font-family: 'pixelFont', sans-serif;
+    font-weight: bold;
+    margin: 0;
+    font-size: 60px;
 }
 
 .conteudo {
@@ -16,14 +26,16 @@ h1 {
 }
 
 input[type=text] {
-    font-family: fantasy;
-    font-weight: 600;
-    /* font-size: 0.85em; */
+    font-family: 'pixelFont', sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    width: 10em;
+    height: 0.5em;
     padding: 0.55em;
     margin: 0.5em;
     background-color: lightyellow;
-    color: black;
-    border: 1.5px solid black;
+    border: 2px solid black;
     border-radius: 15px;
     outline: none;
 }
@@ -33,22 +45,20 @@ input[type=text]:valid {
 }
 
 input::-webkit-input-placeholder {
-    /* font-size: ; */
-    font-family: fantasy;
-    color: black;
-    opacity: 0.5;
+    font-size: 20px;
+    font-family: 'pixelFont', sans-serif;
+    opacity: 0.7;
 }
 
 input[type=text]:hover{
     box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
-    transform: scale(1.025);
+    transform: scale(1.02);
 }
 
 input[type=text]:focus {
     background-color: rgba(255, 255, 164, 0.95);
-    box-shadow: 0.5em 0.5em 0.75em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
-    border: 1.5px solid black;
 }
 
 /* ----------------------------------------------------------------------------------------- */
@@ -77,8 +87,8 @@ table {
 }
 
 table, th, td {
-    font-family: 'Noto Sans HK', sans-serif;
-    font-weight: 500;
+    font-family: 'pixelFont', sans-serif;
+    font-size: 25px;
     border: 2px solid black;
     border-collapse: collapse;
     }
@@ -148,22 +158,24 @@ input[type=radio] + label > img{
 /* ------------------------------------------------------------- */
 /* ESTADO dropbox */
 select:invalid {
-    color: gray;
+    color: rgba(0, 0, 0, 0.375);
 }
 
 option {
     color: black;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 select {
-    font-family: fantasy;
-    font-weight: 600;
-    /* font-size: 0.85em; */
-    padding: 0.5em;
+    font-family: 'pixelFont', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 0.35em;
     margin: 0.5em;
     background-color: lightyellow;
     color: black;
-    border: 1.5px solid rgba(0, 0, 0, 0.8);
+    border: 2px solid rgba(0, 0, 0, 0.8);
     border-radius: 15px;
     outline: none;
     cursor: pointer;
@@ -174,7 +186,7 @@ select:valid {
 }
 
 select:hover {
-    box-shadow: 0.5em 0.5em 0.75em rgba(0, 0, 0, 0.5);
+    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
     transform: scale(1.02);
 }
 
@@ -183,4 +195,9 @@ select:hover {
 fieldset {
     border: 2px solid black;
     background-color: rgba(255, 255, 224, 0.5);
+}
+
+legend {
+    font-family: 'pixelFont', sans-serif;
+    font-size: 25px;
 }

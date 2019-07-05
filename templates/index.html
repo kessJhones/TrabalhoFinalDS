@@ -3,31 +3,36 @@
 <head>
     <title>{{ title|default('Minha Página') }}</title>
     <link rel= "stylesheet" text="text/css" href= "/static/css/custom.css">
-    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="static/css/webfontkit-20190623-205541/stylesheet.css" type="text/css" charset="utf-8" /> -->
 </head>
 
 <body>
     <h1>Crie seu personagem</h1>
     <br>
     <div class="conteudo">
-        <fieldset><legend>Escolha seu personagem</legend>
+        <fieldset><legend align="center" >Escolha seu personagem</legend>
         <form action="/Dados/" name="myForm" method="POST">
             <input type="radio" id="player1" name="players" value="blue" required>
             <label for="player1">
-                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/blue.png" height="">
+                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/blue.png"
+                onerror="this.onerror=null; this.src='/static/blue.png'">
                 <!-- <img src="https://raw.githubusercontent.com/fabiommendes/fgarcade/master/fgarcade/data/themes/abstract/player/blue/up3.png"> -->
             </label>
             <input type="radio" id="player2" name="players" value="green">
             <label for="player2">
-                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/green.png">
+                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/green.png"
+                onerror="this.onerror=null; this.src='/static/green.png'">
             </label>
             <input type="radio" id="player3" name="players" value="grey">
             <label for="player3">
-                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/grey.png">
+                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/grey.png"
+                onerror="this.onerror=null; this.src='/static/grey.png'">
             </label>
             <input type="radio" id="player4" name="players" value="red">
             <label for="player4">
-                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/red.png">
+                <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/red.png"
+                onerror="this.onerror=null; this.src='/static/red.png'">
             </label>
         </fieldset>
     </div>
@@ -37,7 +42,7 @@
         <input type="text" name = "idade" pattern="\d*" required placeholder="IDADE (Somente números)">
         <input type="text" name = "escolaridade" required placeholder="Escolaridde">
         <select name="estado" required>
-            <option value="" disabled selected hidden>ESTADO</option>
+            <option value="" disabled selected hidden>Estado</option>
             <option value="Acre">Acre</option>
             <option value="Algoas">Alagoas</option>
             <option value="Amapá">Amapá</option>
