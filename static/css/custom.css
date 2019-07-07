@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-body {
+* {
     -webkit-font-smoothing: antialiased;
 }
 
@@ -23,11 +23,21 @@ h1 {
     font-weight: bold;
     margin: 0;
     font-size: 60px;
+    text-shadow: 1px 1px white;
+    /* background-color: gold; */
 }
 
-.conteudo {
+.players {
     display: flex;
     justify-content: center;
+}
+
+.content {
+    border: 3px solid black;
+    border-radius: 20px; 
+    padding: 1.15em 0 1.25em;
+    margin: 0 20em;
+    box-shadow: inset 0 0 1.1em rgba(0, 0, 0, 0.9), 0 0 2em white;
 }
 
 input[type=text] {
@@ -39,7 +49,7 @@ input[type=text] {
     height: 0.5em;
     padding: 0.55em;
     margin: 0.8em;
-    background-color: lightyellow;
+    background-color: rgb(255, 255, 205);
     border: 2px solid black;
     border-radius: 9999em;
     text-transform: capitalize;
@@ -47,7 +57,7 @@ input[type=text] {
 }
 
 input[type=text]:valid {
-    background-color:  rgba(255, 255, 164, 0.9);
+    background-color:  rgba(255, 255, 164, 0.95);
 }
 
 input[type=text]:invalid {
@@ -56,7 +66,7 @@ input[type=text]:invalid {
 input::-webkit-input-placeholder {
     font-size: 20px;
     font-family: 'pixelFont', sans-serif;
-    opacity: 0.7;
+    opacity: 0.65;
 }
 
 input[type=text]:hover{
@@ -70,30 +80,31 @@ input[type=text]:focus {
     transform: scale(1.02);
 }
 
-input[type=text]:focus ~ label {
-    translate: 0 -35px;
-
-}
-
 /* ----------------------------------------------------------------------------------------- */
 /* 'Botão Seta' de enviar */
 input[type=image] {
     object-fit: contain;
-    height: 45px;
+    height: 43px;
     outline: none;
 }
 
 input[type=image]:active {
-    transform: translateX(6px);
-    filter: brightness(125%);
+    transform: translateX(7px);
+    filter: brightness(135%);
 }
 /* ----------------------------------------------------------------------------------------- */
 
 /* ----------------------------------------------------------------------------------------- */
 /* Tabela */
 table {
+    font-family: 'pixelFont', sans-serif;
+    font-size: 25px;
+    border: 2px solid black;
+    /* text-shadow: 1px 1px white; */
     background-color: lightyellow;
     box-shadow: 0.3em 0.3em 0.5em rgba(0, 0, 0, 0.75);
+    border-collapse: collapse;
+    margin-bottom: 1em;
 }
 
 .ficha {
@@ -101,25 +112,20 @@ table {
     justify-content: center;
 }
 
-table, th, td {
-    font-family: 'pixelFont', sans-serif;
-    font-size: 25px;
+td {
     border: 2px solid black;
-    border-collapse: collapse;
-    }
-
-th, td{
-    padding: 6.5px;
+    padding: 6px;
 }
 
-tr:hover {background-color: rgb(255, 255, 164)}
+tr:hover {
+    background-color: rgb(255, 255, 164);
+    /* transform: scale(1.1); */
+}
 /* ------------------------------------------------------------------------------------------ */
 
 #textField {
-    display: flex;
+    display: -webkit-flex;
     justify-content: center;
-    /* float: left; */
-
 }
 
 #arrow {
@@ -132,7 +138,7 @@ tr:hover {background-color: rgb(255, 255, 164)}
 input[type=radio]{
     opacity: 0;
     position: fixed;
-    top: 26%;
+    top: 29%;
     left: 49.5%;
 }
 
@@ -176,7 +182,7 @@ input[type=radio] + label > img{
 /* ------------------------------------------------------------- */
 /* ESTADO dropbox */
 select:invalid {
-    color: rgba(0, 0, 0, 0.375);
+    color: rgba(0, 0, 0, 0.36);;
 }
 
 option {
@@ -192,7 +198,7 @@ select {
     padding: 0.35em;
     margin: 0.8em;
     width: 11.4em;
-    background-color: lightyellow;
+    background-color: rgb(255, 255, 205);
     color: black;
     border: 2px solid rgba(0, 0, 0, 0.8);
     border-radius: 9999em;
@@ -211,18 +217,19 @@ select:hover {
 
 /* --------------------------------------------------------------------- */
 #f2{
-    display: flex;
+    display: -webkit-flex;
     justify-content: center;
     margin-bottom: 1em;
 }
 
 fieldset {
     border: 2px solid black;
-    background-color: rgba(255, 255, 224, 0.5);
-    box-shadow: 0.4em 0.45em 0.5em rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 224, 0.4);
+    box-shadow: 0.3em 0.35em 0.5em rgba(0, 0, 0, 0.5);
 }
 
 legend {
     font-family: 'pixelFont', sans-serif;
     font-size: 25px;
+    text-shadow: 1px 1px white;
 }
