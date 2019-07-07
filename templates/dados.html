@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>{{ title|default('Minha Página') }}</title>
-        <link rel= "stylesheet" text="text/css" href= "/static/css/custom.css"
-        onerror="this.onerror=null; this.href='/static/css/custom.css'">
-        <!-- <link rel="stylesheet" href="static/css/webfontkit-20190623-205541/stylesheet.css" type="text/css" charset="utf-8" /> -->
-    </head>
+<head>
+    <title>{{ title|default('Minha Página') }}</title>
+    <link rel= "stylesheet" text="text/css" href= "/static/css/custom.css"
+    onerror="this.onerror=null; this.href='/static/css/custom.css'">
+    <!-- <link rel="stylesheet" href="static/css/webfontkit-20190623-205541/stylesheet.css" type="text/css" charset="utf-8" /> -->
+</head>
 
-    <body>
-        <h1>Ficha do personagem</h1>
-        <hr><br>
+<body>
+    <h1>Ficha do personagem</h1>
+    <br>
+    <div class="content">
         <div class="personagem">
             <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/{{cor}}.png"
             onerror="this.onerror=null; this.src='/static/{{cor}}.png'">
         </div>
-
         <div class="ficha">
             <table>
                 <tr>
@@ -47,9 +47,6 @@
                 </tr>
             </table>
         </div>
-
-        <div>
-
-        </div>
-    </body>
+    </div>
+</body>
 </html>
