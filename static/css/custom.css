@@ -5,7 +5,7 @@
     font-style: normal;
 }
 
-html {
+body {
     background: url(https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/hills.png)
                 repeat-x center bottom fixed,
                 url(https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/tiles.png)
@@ -16,7 +16,6 @@ html {
 * {
     -webkit-font-smoothing: antialiased;
 }
-
 
 h1 {
     text-align: center; 
