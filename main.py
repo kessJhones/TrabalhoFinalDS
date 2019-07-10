@@ -18,26 +18,14 @@ def dados():
         idade = request.form.get('idade')
         estado =  request.form.get('estado')
 
-    players = {'blue':('Mulher','Branca','blue'), 'green':('Mulher','Negra','green'),
-                'grey':('Homem','Branco','grey'), 'red':('Homem','Negro','red')}
+    personagens = {'blue':('Mulher','Branca','blue'), 'green':('Mulher','Negra','green'),
+               'grey':('Homem','Branco','grey'), 'red':('Homem','Negro','red')}
+    raça_dataframe = {'Branca':'B', 'Branco':'B', 'Negro':'N', 'Negra':'N'}
 
-    (genero, raça, cor) = players.get(genero, ('','',''))
+    (genero, raça, cor) = personagens.get(genero, ('','',''))
 
-    if genero == 'Mulher':
-        if raça == 'Branca':
-            salario = dd.income_gender()
-            salario = salario.iat[1,0]
-        elif raça == 'Negra':
-            salario = dd.income_gender()
-            salario = salario.iat[1,0]
-    
-    if genero == 'Homem':
-        if raça == 'Branco':
-            salario = dd.income_gender()
-            salario = salario.iat[0,0]
-        elif raça == 'Negro':
-            salario = dd.income_gender()
-            salario = salario.iat[0,0]
+    raça_dataframe = raça_dataframe.get(raça, '')
+    salario = dd.income(genero, raça_dataframe, estado)
     
     return render_template('dados.html',
         title='Ficha',
