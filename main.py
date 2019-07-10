@@ -16,6 +16,7 @@ def dados():
         nome_personagem = request.form['nome']
         genero = request.form.get('players')
         idade = request.form.get('idade')
+        escolaridade = request.form.get('escolaridade')
         estado =  request.form.get('estado')
 
     personagens = {'blue':('Mulher','Branca','blue'), 'green':('Mulher','Negra','green'),
@@ -25,7 +26,7 @@ def dados():
     (genero, raça, cor) = personagens.get(genero, ('','',''))
 
     raça_dataframe = raça_dataframe.get(raça, '')
-    salario = dd.income(genero, raça_dataframe, estado)
+    salario = dd.income(genero, raça_dataframe, estado, escolaridade)
     
     return render_template('dados.html',
         title='Ficha',
@@ -34,6 +35,7 @@ def dados():
         genero = genero,
         raça = raça,
         salario = salario,
+        escolaridade = escolaridade,
         estado = estado,
         cor = cor,
     )
