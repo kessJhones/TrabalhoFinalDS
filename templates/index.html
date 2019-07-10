@@ -5,7 +5,6 @@
     <link rel= "stylesheet" text="text/css" href= "/static/css/custom.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/fga-unb/comunidade-unb-theme/master/favicon.ico">
-    <!-- <link rel="stylesheet" href="static/css/webfontkit-20190623-205541/stylesheet.css" type="text/css" charset="utf-8" /> -->
 </head>
 
 <body>
@@ -41,8 +40,18 @@
     <div id="textField">
         <fieldset id="f2"><legend>Insira seus dados</legend>
         <input type="text" name = "nome" required placeholder="NOME" autocomplete="off">
-        <input type="text" name = "idade" pattern="\d*" required placeholder="IDADE (Somente números)" autocomplete="off">
-        <input type="text" name = "escolaridade" pattern="\d*" required placeholder="ESCOLARIDADE (anos)" autocomplete="off">
+        <input type="text" name = "idade" pattern="\d*" min="1" max="150" required placeholder="IDADE (Somente números)" autocomplete="off">
+        <!-- <input type="text" name = "escolaridade" pattern="[0-9]" min="0" max="15" required placeholder="ESCOLARIDADE (0-15 anos)" autocomplete="off" title="Nível de escolaridade (0-15 anos)"> -->
+        <select name="escolaridade" required title="Nível de escolaridade">
+            <option value="" disabled selected hidden>ESCOLARIDADE</option>
+            <option value="Pós-Graduação">Pós-Graduação</option>
+            <option value="Ensino superior">Ensino superior</option>
+            <option value="Ensino médio completo">Ensino médio completo</option>
+            <option value="Ensino médio incompleto">Ensino médio incompleto</option>
+            <option value="Ensino fundamental completo">Ensino fundamental completo</option>
+            <option value="Ensino fundamental incompleto">Ensino fundamental incompleto</option>
+            <option value="Sem educação">Sem educação</option>
+        </select>
         <select name="estado" required title="Selecione seu estado.">
             <option value="" disabled selected hidden>ESTADO</option>
             <option value="Acre">Acre</option>
