@@ -27,7 +27,31 @@ def dados():
 
     raça_dataframe = raça_dataframe.get(raça, '')
     salario = dd.income(genero, raça_dataframe, estado, escolaridade)
+
+
+    if genero == 'Homem':
+        if raça == 'Branco':
+            info = "Seu personagem recebe 100% das moedas coletadas." 
+        elif raça == 'Negro':
+            info = "Seu personagem recebe apenas 70% das moedas coletadas."
+    elif genero == 'Mulher':
+        if raça == 'Negra':
+            info = "Seu personagem recebe apenas 50% das moedas coletadas."
+        elif raça == 'Branca':
+            info = "Seu personagem recebe apenas 80% das moedas coletadas."
     
+    if salario >= dd.income_mean_uf(estado):
+       media_salario_uf = "acima da média do seu estado."
+    else:
+       media_salario_uf = "abaixo da média do seu estado."
+    if salario >= dd.income_mean():
+        media_salario = "Seu salario está acima da média nacional e {}".format(media_salario_uf)
+    else:
+        media_salario = "Seu salario está abaixo da média nacional e {}".format(media_salario_uf)
+
+    
+    media_escolaridade = "PLACEHOLDER Vantagem!"
+
     return render_template('dados.html',
         title='Ficha',
         nome = nome_personagem,
@@ -38,6 +62,9 @@ def dados():
         escolaridade = escolaridade,
         estado = estado,
         cor = cor,
+        info = info,
+        media_salario = media_salario,
+        media_escolaridade = media_escolaridade,
     )
 
 if __name__ == '__main__':
