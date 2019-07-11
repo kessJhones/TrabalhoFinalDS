@@ -29,3 +29,12 @@ def income(gender, race, uf, education):
     values = df[['gender', 'race', 'uf', 'education', 'income']].groupby(['gender','race','uf','education']).mean()
     renda = values['income'][gender, race, uf, education]
     return round(renda, 2)
+
+def income_mean():
+    values = df.income.mean()
+    return values
+
+def income_mean_uf(uf):
+    values = df[['uf', 'income']].groupby(['uf']).mean()
+    values = values['income'][uf]
+    return values

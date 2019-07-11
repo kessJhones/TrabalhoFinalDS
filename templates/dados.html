@@ -12,15 +12,18 @@
     <br>
     <div class="content">
         <div class="personagem">
-            <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/{{cor}}.png"
+            <figure>
+            <img src="https://raw.githubusercontent.com/kessJhones/TrabalhoFinalDS/master/static/{{cor}}.png" height="52px" width="42px"
             onerror="this.onerror=null; this.src='/static/{{cor}}.png'">
+            <figcaption>{{nome}}</figcaption>
+            </figure>
         </div>
         <div class="ficha">
             <table>
-                <tr>
+                <!-- <tr>
                     <td>Nome</td>
                     <td>{{nome}}</td>
-                </tr>
+                </tr> -->
                 <tr>
                     <td>Idade</td>
                     <td>{{idade}} anos</td>
@@ -46,6 +49,18 @@
                     <td>R${{salario}}</td>
                 </tr>
             </table>
+            <div class="info">
+                <span>Atributos</span>
+                <fieldset class="atributos"><legend>{{genero}} {{raça}}</legend>
+                <span>{{info}}</span><br />
+                </fieldset>
+                <fieldset class="atributos"><legend>Média salarial</legend>
+                <span>{{media_salario}}</span>
+                </fieldset>
+                <fieldset class="atributos"><legend>{{escolaridade}}</legend>
+                    <span>{{media_escolaridade}}</span>
+                </fieldset>
+            </div>
         </div>
     </div>
 </body>
